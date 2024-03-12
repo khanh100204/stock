@@ -53,10 +53,8 @@ func CreateWatchList(listName string, ticker string) (string, error) {
 		},
 	}
 
-	//fmt.Println(watchlistCreate.WatchlistItems[0].Instrument.Symbol)
 
 	watchlistMarshal, err := json.Marshal(watchlistData)
-	//fmt.Printf("Watchlist:\n%s\n", watchlistMarshal)
 
 	request, err := http.NewRequest("POST", fmt.Sprintf("https://api.tdameritrade.com/v1/accounts/%s/watchlists", keyfile.ACCTNUM), bytes.NewBuffer([]byte(watchlistMarshal)))
 	if err != nil {
