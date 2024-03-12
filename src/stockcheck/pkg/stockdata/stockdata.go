@@ -214,7 +214,6 @@ func ChunkStockSymbls(symbols []string, chunkSize int) [][]string {
 //MakeTickersToString turns a slice into a string
 func MakeTickersToString(tickers []string) string {
 	var fullTickers string
-	//fmt.Println(tickers)
 	for i, item := range tickers {
 		if i < len(tickers) {
 			fullTickers += fmt.Sprintf(`%s,`, item)
@@ -222,6 +221,5 @@ func MakeTickersToString(tickers []string) string {
 			fullTickers += item
 		}
 	}
-	//fmt.Println(fullTickers)
 	return fullTickers
 }
