@@ -7,7 +7,7 @@ import (
 )
 
 func writeDataToText(data string) error {
-	//Append the file and if it doesn't exist create it
+
 	file, err := os.OpenFile("stock.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
