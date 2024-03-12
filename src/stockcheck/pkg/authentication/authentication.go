@@ -20,7 +20,6 @@ type token struct {
 }
 
 func RefreshToken() error {
-	//Assign a token variable to unmarshal too
 	var authkey token
 	//Create http client object
 	client := &http.Client{}
@@ -32,6 +31,9 @@ func RefreshToken() error {
 	data.Add("client_id", fmt.Sprintf("%s", keyfile.CONSUMERKEY))
 	//Create HTTP Request
 	request, err := http.NewRequest("POST", "https://api.tdameritrade.com/v1/oauth2/token?", bytes.NewBufferString(data.Encode()))
+	if err != nil {
+		return err
+	}
 	request.Header.Set("Content-Type", "application/x-www-form-urlencoded; param=value")
 	//Run request
 	resp, err := client.Do(request)
