@@ -119,7 +119,7 @@ func main() {
 
 		}
 
-		//If setwatchlist true, create a watchlist based on the first 10 tickers in stockList created above.
+		//If setwatchlist is true, create a watchlist based on the first 10 tickers in stockList created above.
 		if setWatchlist {
 			//Create string array for list of ticker symbols to add to watchlist
 			var tickerSymbolOnly []string
