@@ -19,7 +19,6 @@ func CalculateMedian(nums []float32) float32 {
 
 //CalcTrendingMedian calculates median price for months worth of data, compare this price to the current price and
 func CalcTrendingMedian(stock stockdata.Stock, consumerKey string) (string, error) {
-	//String variable to return statement
 	var fullStatement string
 
 	//Get price history
