@@ -11,8 +11,7 @@ Available Commands:
 	go run .\main.go -sector <sector>
 	go run .\main.go -sector <sector> -watchlist
 Flags:
-	-watchlist    Boolean to add top 10 from search to your TD Ameritrade Accounts Watchlist
-
+	-watchlist    Boolean to add top 10
 Available Sectors:
 	toptickers
 	construction
