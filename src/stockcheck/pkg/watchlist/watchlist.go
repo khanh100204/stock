@@ -164,7 +164,7 @@ func GetWatchLists() ([]WatchList, string, error) {
 	if err != nil {
 		return nil, "", err
 	}
-	//Add this header to enable non delayed quotes
+
 	request.Header.Add("Authorization", fmt.Sprintf("Bearer %s", keyfile.TDKEY))
 
 	resp, err := client.Do(request)
